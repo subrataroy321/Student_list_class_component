@@ -81,7 +81,6 @@ class StudentList extends Component{
         }else {
             this.generateRollNo();
         }
-        this.cancelEditing()
     }
 
     
