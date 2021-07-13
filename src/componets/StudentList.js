@@ -69,7 +69,7 @@ class StudentList extends Component{
     //     generateRollNo();
     // }, [this.state.isAdding])
 
-    componentDidMount() {
+    componentWillMount() {
         this.generateRollNo();
     }
 
@@ -184,7 +184,7 @@ class StudentList extends Component{
     render() {
         return (
             <div className="main-container">
-                <input tybe="button" value="Add a Student" className="btn btn-dark" style={{ marginBottom: "20px"}} onClick={() => this.state.isAdding ? this.setState({isAdding: false}) && this.generateRollNo() : this.setState({isAdding: true}) && this.generateRollNo()}/>
+                <input type="button" value="Add a Student" className="btn btn-dark" style={{ marginBottom: "20px"}} onClick={() => this.state.isAdding ? this.setState({isAdding: false}) : this.setState({isAdding: true}) && this.generateRollNo()}/>
                 <div style={{display: `${this.state.isAdding ? "" : "none"}`}}>
                     <div className="add-student">
                         <table className="table">
